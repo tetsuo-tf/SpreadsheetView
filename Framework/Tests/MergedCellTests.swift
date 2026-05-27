@@ -9,6 +9,7 @@
 import XCTest
 @testable import SpreadsheetView
 
+@MainActor
 class MergedCellTests: XCTestCase {
 
     override func setUp() {
@@ -184,7 +185,7 @@ class MergedCellTests: XCTestCase {
                        numberOfVisibleColumns(in: spreadsheetView, parameters: parameters) * numberOfVisibleRows(in: spreadsheetView, parameters: parameters))
 
         for (index, visibleCell) in spreadsheetView.visibleCells
-            .sorted()
+            .sorted(by: { $0.indexPath < $1.indexPath })
             .enumerated() {
                 let column = index / numberOfVisibleRows(in: spreadsheetView, parameters: parameters)
                 let row = index % numberOfVisibleRows(in: spreadsheetView, parameters: parameters)

@@ -9,6 +9,7 @@
 import XCTest
 @testable import SpreadsheetView
 
+@MainActor
 class ConfigurationTests: XCTestCase {
 
     override func setUp() {
@@ -282,9 +283,9 @@ class ConfigurationTests: XCTestCase {
         spreadsheetView.indicatorStyle = .black
         XCTAssertEqual(spreadsheetView.indicatorStyle, spreadsheetView.overlayView.indicatorStyle)
 
-        XCTAssertEqual(spreadsheetView.decelerationRate, UIScrollViewDecelerationRateNormal)
+        XCTAssertEqual(spreadsheetView.decelerationRate, .normal)
         XCTAssertEqual(spreadsheetView.decelerationRate, spreadsheetView.tableView.decelerationRate)
-        spreadsheetView.decelerationRate = UIScrollViewDecelerationRateFast
+        spreadsheetView.decelerationRate = .fast
         XCTAssertEqual(spreadsheetView.decelerationRate, spreadsheetView.tableView.decelerationRate)
     }
 }
