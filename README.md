@@ -24,14 +24,6 @@ Apologies for the fuss, the new place has amazing people maintaining the communi
     <a href="https://codecov.io/gh/kishikawakatsumi/SpreadsheetView">
         <img src="https://codecov.io/gh/kishikawakatsumi/SpreadsheetView/branch/master/graph/badge.svg" alt="Codecov" />
     </a>
-    <a href="https://cocoapods.org/pods/SpreadsheetView">
-        <img src="https://img.shields.io/cocoapods/v/SpreadsheetView.svg?style=flat"
-             alt="Pods Version">
-    </a>
-    <a href="http://cocoapods.org/pods/SpreadsheetView/">
-        <img src="https://img.shields.io/cocoapods/p/SpreadsheetView.svg?style=flat"
-             alt="Platforms">
-    </a>
     <a href="https://github.com/Carthage/Carthage">
         <img src="https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat"
              alt="Carthage Compatible">
@@ -62,14 +54,6 @@ Full configurable spreadsheet view user interfaces for iOS applications. With th
 SpreadsheetView is written in Swift 5. Compatible with iOS 9.0+
 
 ## Installation
-
-### CocoaPods
-SpreadsheetView is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'SpreadsheetView'
-```
 
 ### Carthage
 For [Carthage](https://github.com/Carthage/Carthage), add the following to your `Cartfile`:
