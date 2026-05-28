@@ -19,9 +19,6 @@ public struct Gridlines {
     }
 }
 
-@available(*, deprecated, renamed: "Gridlines")
-public typealias Grids = Gridlines
-
 public enum GridStyle {
     case `default`
     case none
@@ -33,8 +30,8 @@ extension GridStyle: Equatable {
         switch (lhs, rhs) {
         case (.none, .none):
             return true
-        case let (.solid(lhs), .solid(rhs)):
-            return lhs.width == rhs.width && lhs.color == rhs.color
+        case let (.solid(lhsWidth, lhsColor), .solid(rhsWidth, rhsColor)):
+            return lhsWidth == rhsWidth && lhsColor == rhsColor
         default:
             return false
         }

@@ -20,7 +20,14 @@ extension SpreadsheetView {
 
     public var scrollIndicatorInsets: UIEdgeInsets {
         get {
-            return overlayView.scrollIndicatorInsets
+            if #available(iOS 13.0, *) {
+                return UIEdgeInsets(top: overlayView.verticalScrollIndicatorInsets.top,
+                                    left: overlayView.horizontalScrollIndicatorInsets.left,
+                                    bottom: overlayView.verticalScrollIndicatorInsets.bottom,
+                                    right: overlayView.horizontalScrollIndicatorInsets.right)
+            } else {
+                return overlayView.scrollIndicatorInsets
+            }
         }
         set {
             overlayView.scrollIndicatorInsets = newValue
